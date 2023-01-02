@@ -75,3 +75,26 @@ async def sort_by_column(column:str,asce:bool=True):
         })
     return frameworks
 
+@app.get('/{framework}/{column}')
+async def find_one_and_sort(framework:str,column:str,asce:bool=True):
+    df = pd.read_csv('frameworks.csv')
+    df = df.query(f"framework == '{framework}'")
+    if column not in list(df.columns.values):
+        raise HTTPException(status_code=400,detail="Unrecognized key.")
+    df = df.sort_values(by=column,ascending=asce)
+    frameworks = []
+    for id, row in df.iterrows():
+        frameworks.append({
+            "id":id,
+            "rank": row['rank'],
+            "framework": row['framework'],
+            "json-serialization": row['json-serialization'],
+            "single-query": row['single-query'],
+            "multiple-query": row['multiple-query'],
+            "fortunes": row['fortunes'],
+            "updates": row['updates'],
+            "plaintext": row['plaintext'],
+            "weighted": row['weighted'],
+            "year": row['year']
+        })
+    return frameworks

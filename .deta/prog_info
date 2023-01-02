@@ -1,0 +1,1 @@
+{"id":"fe07d74d-fe2f-4fe9-b282-edf73e1adbd0","space":14603,"runtime":"python3.9","name":"benchmarksAPI","path":"8g5s46","project":"c05ucszo","account":"144798365827","region":"ap-southeast-1","deps":["fastapi","pandas"],"envs":null,"public":true,"log_level":"off","cron":""}
