@@ -1,4 +1,4 @@
-Rnk,Framework,JSON,1-query,20-query,Fortunes,Updates,Plaintext,Weighted score,Year
+Rank,Framework,Json-serialization,Single-query,Multiple-query,Fortunes,Updates,Plaintext,Weighted,Year
 26,aah,331243,247734,25725,89790,10901,577094,3564,2019
 33,aah,346427,246585,19898,96699,8319,536264,2257,2020
 45,aah,342502,242725,19582,95575,8260,541387,2232,2021
