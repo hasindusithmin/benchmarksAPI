@@ -8,7 +8,16 @@ from enum import Enum
 app = FastAPI(
     title="benchmarksAPI",
     version="0.2.0",
-    description="The BenchmarksAPI is a tool for measuring the performance of web frameworks. Using this API, users can obtain data on the performance of various web frameworks under various workloads, including JSON serialization, single and multiple database queries, rendering a list of fortunes, updating a database record, and rendering a simple plaintext message. These measurements can be useful for developers looking to choose a web framework for their application, as well as for comparing the performance of different frameworks."
+    description="The BenchmarksAPI is a tool for measuring the performance of web frameworks. Using this API, users can obtain data on the performance of various web frameworks under various workloads, including JSON serialization, single and multiple database queries, rendering a list of fortunes, updating a database record, and rendering a simple plaintext message. These measurements can be useful for developers looking to choose a web framework for their application, as well as for comparing the performance of different frameworks.",
+    contact={
+        "name": "Hasindu Sithmin",
+        "url": "https://www.linkedin.com/in/hasindu-sithmin-9a1a12209/",
+        "email": "hasindusithmin64@gmail.com",
+    },
+    license_info={
+        "name": "Github",
+        "url": "https://github.com/hasindusithmin/benchmarksAPI",
+    }
 )
 
 @app.get('/')
